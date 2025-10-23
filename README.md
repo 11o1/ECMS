@@ -90,9 +90,9 @@ static inline double apply_calibration(double raw, const axis_calib_t* calib) {
 
 #### 3.1.1. Математическая модель
 
-$$
+$`
 y[n] = \alpha \cdot (y[n-1] + x[n] - y[n-1])
-$$
+`$
 где $`\alpha = \dfrac{f_s}{f_s + f_c}`$,  
 $`f_s`$ — частота дискретизации,  
 $`f_c`$ — частота среза.
