@@ -303,8 +303,11 @@ double biquad_process(biquad_filter_t* f, double x) {
 ### 4.1. Дискретное преобразование Хартли (DHT)
 
 #### 4.1.1. Математическая модель
+
 $`
+
 H[k] = \sum_{n=0}^{N-1} x[n] \cdot \operatorname{cas}\left( \frac{2\pi kn}{N} \right), \quad \operatorname{cas}(\theta) = \cos\theta + \sin\theta
+
 `$
 
 #### 4.1.2. Реализация
