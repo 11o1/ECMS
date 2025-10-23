@@ -305,7 +305,7 @@ double biquad_process(biquad_filter_t* f, double x) {
 #### 4.1.1. Математическая модель
 
 $`
-H[k] = \sum_{n=0}^{N-1} x[n] \cdot \operatorname{cas}\left( \frac{2\pi kn}{N} \right), \quad \operatorname{cas}(\theta) = \cos\theta + \sin\theta
+H[k] = \sum_{n=0}^{N-1} x[n] \cdot \text{cas}\left( \frac{2\pi kn}{N} \right), \quad \text{cas}(\theta) = \cos\theta + \sin\theta
 `$
 
 #### 4.1.2. Реализация
@@ -361,8 +361,8 @@ void dht(const double* input, double* output, size_t N) {
 Рекуррентное соотношение для FHT:
 $`
 \begin{aligned}
-H_e[k] &= E[k] + \operatorname{cas}\left(\frac{2\pi k}{N}\right) \cdot O[k] \\
-H_o[k] &= E[k] - \operatorname{cas}\left(\frac{2\pi k}{N}\right) \cdot O[k]
+H_e[k] &= E[k] + \text{cas}\left(\frac{2\pi k}{N}\right) \cdot O[k] \\
+H_o[k] &= E[k] - \text{cas}\left(\frac{2\pi k}{N}\right) \cdot O[k]
 \end{aligned}
 `$
 где $`E[k]`$ и $`O[k]`$ — FHT чётной и нечётной подпоследовательностей.
